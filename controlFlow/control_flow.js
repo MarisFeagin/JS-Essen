@@ -49,3 +49,18 @@ let isAuthenticated = true;
 let authenticaticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticaticationStatus);
+
+if (userCategory === "Employee") {
+    accessLevel = "Full Access to Dietary Services."
+} else if (userCategory === "Enrolled Member") {
+    accesslevel = "Access to Dietary Services and 1-on-1 Dietician Meeting."
+}
+
+if (userType === "Subscriber") {
+    accesslevel = "Partial Access to Dietary Services"
+} else {
+    userMessage = "Please enroll to gain access to Dietary Services."
+}
+
+console.log ("Access Level:", userCategory);
+console.log ("Subscription Type:", userType);
