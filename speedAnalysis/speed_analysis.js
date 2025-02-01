@@ -36,9 +36,13 @@ function endTest() {
         wpm = Math.round((typedWords / timeElapsed) * 60);
     }
 
+    //Check user's text length
+    var textLength = userTypedText;
+
     //Display results
     var outputDiv = document.getElementById("output");
     outputDiv.innerHTML = "<h2>Typing Test Results:</h2>" +
+        "<p>Total Length:" + textLength + "</p>" +
         "<p>Words Typed: " + typedWords + "</p>" +
         "Time Elapsed:" + timeElapsed.toFixed(2) + " seconds</p>" +
         "<p>Words Per Minute (WPM):" + wpm + "</p>";
@@ -46,5 +50,5 @@ function endTest() {
     // Reset Button
     var button = document.getElementById("btn");
     button.innerHTML = "Start Test";
-    button.onclick = startTest
+    button.onclick = startTest;
 }
